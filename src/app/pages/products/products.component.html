@@ -1,0 +1,28 @@
+<div class="box">
+  <h1 class="text-center py-5">E-commerce</h1>
+
+  <div class="container">
+    <div class="row">
+      @for (item of data; track $index) {
+
+      <div class="col py-3">
+        <!-- !card Design -->
+        <div class="card" routerLink="{{ item.id }}" style="width: 18rem">
+          <img
+            src="{{ item.image }}"
+            height="200"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ item.title }}</h5>
+            <a  class="btn btn-primary">{{
+              item.price
+            }}</a>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>
